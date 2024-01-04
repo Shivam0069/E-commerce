@@ -60,14 +60,17 @@ export default function Card({ item }) {
           <p className="text-sm text-green-600">{discountPercentage}% off</p>
         </div>
       </div>
-      <div
-        onClick={cartHandler}
-        className="border rounded-md cursor-pointer inline-block px-4 py-2 bg-[#FF9F00] text-white font-semibold mt-3 hover:scale-105 transition-all duration-200"
-      >
-        <button className="flex items-center  space-x-2 focus:outline-none transform ">
-          <IoCartOutline />
-          <p>ADD TO CART</p>
-        </button>
+      <div className="flex justify-between items-end">
+        <button disabled className="disabled:cursor-not-allowed border bg-[#FB641B] disabled:bg-gray-500 px-4 py-2 rounded-md">Buy Now</button>
+        <div
+          onClick={cartHandler}
+          className="border  rounded-md cursor-pointer inline-block px-4 py-2 bg-[#FF9F00] text-white font-semibold mt-3 hover:scale-105 transition-all duration-200"
+        >
+          <button className="flex items-center  space-x-2 focus:outline-none transform ">
+            <IoCartOutline />
+            <p>ADD TO CART</p>
+          </button>
+        </div>
       </div>
       {/* <div className="absolute top-4 right-4 bg-[#E50914] text-white font-bold p-1 rounded-full">
         New
